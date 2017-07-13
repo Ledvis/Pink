@@ -1,0 +1,78 @@
+.reviews__wrapper {
+  @include container-fluid();
+  padding: 40px 0;
+  padding-bottom: 90px;
+  text-align: center;
+}
+
+.reviews__author {
+  display: block;
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 30px;
+  font-style: normal;
+}
+
+.reviews__item {
+  @include border-box();
+  margin: 0;
+  padding: 0 20px;
+}
+
+.reviews__text {
+  margin: 0;
+  color: rgb(40, 54, 69);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+.reviews__legend {
+  display: none;
+}
+
+@media #{$tablet-width} {
+  .reviews__wrapper {
+    padding-bottom: 66px;
+  }
+  .reviews__item {
+    display: flex;
+    flex-direction: column;
+  }
+  .reviews__author {
+    order: 1;
+    margin: 0;
+    margin-bottom: 8px;
+    font-size: 20px;
+  }
+  .reviews__text {
+    margin-bottom: 30px;
+    font-size: 18px;
+  }
+  .reviews__legend {
+    order: 1;
+    display: block;
+    margin: 0;
+    color: rgb(40, 54, 69);
+    font-size: 14px;
+    font-weight: 400;
+  }
+}
+
+@media #{$desktop-width} {
+  .reviews__wrapper {
+    padding-top: 187px;
+    padding-bottom: 24px;
+    background: url("data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9Ijc4LjY3MnB4IiBoZWlnaHQ9IjYzLjc4OXB4IiB2aWV3Qm94PSIwIDAgNzguNjcyIDYzLjc4OSIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgNzguNjcyIDYzLjc4OSIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CiAgPGc+CiAgICA8cGF0aCBmaWxsPSIjZWZlZmVmIiBkPSJNMzQuOTY3LDcuMDYzTDMwLjcxMywwQzI4LjI3MiwxLjQ5NSwwLDEyLjIwNywwLDM5LjYxN2MwLDcuMjMxLDAuMzM2LDI0LjE3MiwxOC45LDI0LjE3MiBjMTEuMTg3LDAsMTMuOTQtMTAuMjc5LDEzLjk0LTEzLjU4NGMwLTIxLjk3Ny0yMS4zODItMTQuMTc3LTIxLjM4Mi0xNC4xNzdDMTEuNDU4LDE3Ljk1NywzMS4yNjMsOS4xODQsMzQuOTY3LDcuMDYzeiIvPgogIDwvZz4KICA8Zz4KICAgIDxwYXRoIGZpbGw9IiNlZmVmZWYiIGQ9Ik03OC42NzIsNy4wNjNMNzQuNDE4LDBjLTIuNDQsMS40OTUtMzAuNzEzLDEyLjIwNy0zMC43MTMsMzkuNjE3YzAsNy4yMzEsMC4zMzcsMjQuMTcyLDE4LjksMjQuMTcyIGMxMS4xODcsMCwxMy45MzktMTAuMjc5LDEzLjkzOS0xMy41ODRjMC0yMS45NzctMjEuMzgxLTE0LjE3Ny0yMS4zODEtMTQuMTc3QzU1LjE2NSwxNy45NTcsNzQuOTY5LDkuMTg0LDc4LjY3Miw3LjA2M3oiLz4KICA8L2c+Cjwvc3ZnPgo=") no-repeat center 72px;
+  }
+  .reviews__item {
+  	padding: 0 130px;
+  }
+  .reviews__author {
+    font-size: 24px;
+  }
+  .reviews__legend {
+    font-size: 18px;
+  }
+}

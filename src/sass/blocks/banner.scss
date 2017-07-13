@@ -1,0 +1,90 @@
+.banner {
+  display: none;
+}
+
+@media #{$tablet-width} {
+  .banner {
+    position: relative;
+    display: block;
+    padding: 90px 40px;
+    padding-left: 350px;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 58px;
+      left: 40px;
+      width: 240px;
+      height: 277px;
+      background: url("data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjI5OHB4IiBoZWlnaHQ9IjM0NS4wOTdweCIgdmlld0JveD0iMCAwIDI5OCAzNDUuMDk3IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAyOTggMzQ1LjA5NyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CiAgPHBhdGggZmlsbD0iI2RlZGVkZSIgZD0iTTI2NC41NjgsMTAyLjA1NWw1LjM1NS01LjM1NWM3LjcxNy03LjcxNyw5LjEyNC0xOC45MzgsMy4xMjYtMjQuOTM1Yy01Ljk5Ny01Ljk5Ny0xNy4yMTctNC41OS0yNC45MzQsMy4xMjdsLTUuMzg2LDUuMzg1IEMyMjEuNzY4LDYzLjI5MiwxOTYuMTEsNTEuODc1LDE2OCw0OC4yOTd2LTkuNTgzaDcuNjU4YzEwLjkxNCwwLDE5Ljg0My04LjcxMSwxOS44NDMtMTkuMzU3UzE4Ni41NzMsMCwxNzUuNjU5LDBoLTUzLjMxNyAgYy0xMC45MTMsMC0xOS44NDIsOC43MTEtMTkuODQyLDE5LjM1N3M4LjkyOSwxOS4zNTcsMTkuODQyLDE5LjM1N0gxMzB2OS41ODNDNTYuNjgxLDU3LjYyOSwwLDEyMC4yNDQsMCwxOTYuMDk3ICBjMCw4Mi4yOTEsNjYuNzA5LDE0OSwxNDksMTQ5YzgyLjI5LDAsMTQ5LTY2LjcwOSwxNDktMTQ5QzI5OCwxNjAuNDM0LDI4NS40NjUsMTI3LjcwMywyNjQuNTY4LDEwMi4wNTV6IE0xNDksMzA2LjI2NCBjLTYwLjg0NCwwLTExMC4xNjctNDkuMzIzLTExMC4xNjctMTEwLjE2N1M4OC4xNTYsODUuOTMsMTQ5LDg1LjkzYzYwLjg0MywwLDExMC4xNjcsNDkuMzIzLDExMC4xNjcsMTEwLjE2NyAgUzIwOS44NDMsMzA2LjI2NCwxNDksMzA2LjI2NHoiLz4KPC9zdmc+Cg==") no-repeat;
+      background-size: 240px 277px;
+    }
+    &::after {
+      @include border-box();
+      content: "24";
+      position: absolute;
+      top: 113px;
+      left: 58px;
+      width: 203px;
+      height: 204px;
+      color: rgb(210, 40, 86);
+      font-family: "Open Sans", "Arial", sans-serif;
+      font-size: 100px;
+      font-weight: 700;
+      line-height: 160px;
+      text-align: center;
+      border: 14px solid $pink;
+      border-radius: 50%;
+    }
+  }
+  .banner__title {
+    margin: 0;
+    margin-bottom: 16px;
+    padding-right: 90px;
+    font-size: 30px;
+    line-height: 36px;
+  }
+  .banner__descr {
+    margin: 0;
+    margin-bottom: 16px;
+    color: rgb(40, 54, 69);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .banner__anchor {
+    color: $pink;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+}
+
+@media #{$desktop-width} {
+  .banner {
+    padding-left: 490px;
+    padding-right: 130px;
+    padding-bottom: 157px;
+    background-color: rgb(242, 242, 242);
+    &::before {
+      top: 0;
+      left: 130px;
+      width: 298px;
+      height: 345px;
+      background-size: 298px 345px;
+    }
+    &::after {
+      top: 71px;
+      left: 153px;
+      width: 250px;
+      height: 250px;
+      font-size: 120px;
+      line-height: 204px;
+    }
+  }
+  .banner__descr {
+    font-size: 18px;
+  }
+  .banner__anchor {
+    font-size: 18px;
+  }
+}

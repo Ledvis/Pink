@@ -1,0 +1,257 @@
+.post {
+  background-color: rgb(242, 242, 242);
+}
+
+.post__wrapper {
+  @include container-fluid();
+  position: relative;
+  padding: 0 20px;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 195px;
+    width: 100%;
+    height: 1px;
+    background-color: rgb(206, 206, 206);
+  }
+}
+
+.post__item {
+  padding: 20px 0;
+  padding-bottom: 40px;
+  img {
+    display: block;
+    width: 100%;
+    height: 374px;
+    margin-bottom: 42px;
+    object-fit: cover;
+  }
+}
+
+.post__instruments {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  padding: 0 36px;
+  padding-bottom: 60px;
+  svg {
+    cursor: pointer;
+  }
+}
+
+.post__crop {
+  svg {
+    width: 44px;
+    height: 44px;
+    fill: $pink;
+  }
+}
+
+.post__fill {
+  svg {
+    width: 48px;
+    height: 43px;
+    fill: rgba(40, 54, 69, 0.3);
+    &:hover {
+      fill: rgba(40, 54, 69, 0.5);
+    }
+  }
+}
+
+.post__contrast {
+  svg {
+    width: 32px;
+    height: 32px;
+    fill: rgba(40, 54, 69, 0.3);
+    &:hover {
+      fill: rgba(40, 54, 69, 0.5);
+    }
+  }
+}
+
+.post__range {
+  position: absolute;
+  left: 18px;
+  right: 18px;
+  bottom: 25px;
+  height: 2px;
+  background-color: rgb(107, 117, 127);
+  cursor: pointer;
+  &--hidden {
+    display: none;
+  }
+}
+
+.post__range-indicator {
+  position: absolute;
+  top: -8px;
+  right: 20%;
+  width: 14px;
+  height: 14px;
+  background-color: rgb(242, 242, 242);
+  border: 2px solid rgb(210, 40, 86);
+  border-radius: 50%;
+  &:active {
+    background-color: $pink;
+  }
+}
+
+.post__btn {
+  width: 100%;
+  &:first-child {
+    margin-bottom: 12px;
+  }
+}
+
+@media #{$tablet-width} {
+  .post__wrapper {
+    padding: 0;
+    &::before {
+      display: none;
+    }
+  }
+  .post__item {
+    display: flex;
+    flex-wrap: wrap;
+    img {
+      width: 300px;
+      height: 400px;
+      margin-right: 50px;
+      margin-bottom: 0;
+    }
+  }
+  .post__flexbox {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30%;
+  }
+  .post__instruments {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin: 0;
+    margin-bottom: 40px;
+    padding: 0;
+  }
+  .post__crop,
+  .post__fill,
+  .post__contrast {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px 0;
+    padding-right: 20px;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: rgb(206, 206, 206);
+    }
+  }
+  .post__crop {
+    svg {
+      width: 22px;
+      height: 22px;
+    }
+  }
+  .post__fill {
+    svg {
+      width: 24px;
+      height: 22px;
+      fill: $pink;
+      &:hover {
+        fill: $pink;
+      }
+    }
+  }
+  .post__contrast {
+    svg {
+      width: 16px;
+      height: 16px;
+      fill: $pink;
+      &:hover {
+        fill: $pink;
+      }
+    }
+  }
+  .post__range {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 90%;
+    margin: 0;
+    margin-left: 10px;
+    &--hidden {
+      display: inherit;
+    }
+  }
+  .post__range-indicator {
+    top: -8px;
+    &--left {
+      left: 25%;
+    }
+    &--right {
+      right: 15%;
+    }
+    &--center {
+      right: 40%;
+    }
+  }
+}
+
+@media #{$desktop-width} {
+  .post {
+    background-color: transparent;
+  }
+  .post__wrapper {
+    background-color: rgb(242, 242, 242);
+  }
+  .post__item {
+    padding: 57px 80px;
+    padding-right: 60px;
+    img {
+    	margin-right: 96px;
+    }
+  }
+  .post__crop {
+    svg {
+    	width: 44px;
+    	height: 44px;
+    }
+  }
+  .post__fill {
+    svg {
+    	width: 48px;
+    	height: 43px;
+    }
+  }
+  .post__contrast {
+    svg {
+    	width: 32px;
+    	height: 32px;
+    }
+  }
+  .post__range {
+  	width: 85%;
+  }
+  .post__buttons {
+  	display: flex;
+  }
+  .post__btn {
+  	&:first-of-type {
+  		margin-bottom: 0;
+  		margin-right: 44px;
+  	}
+  }
+}

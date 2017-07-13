@@ -1,0 +1,76 @@
+.btn {
+  display: block;
+  padding: 15px 10px;
+  color: $white;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 18px;
+  text-align: center;
+  text-decoration: none;
+  border: 3px solid rgb(255, 255, 255);
+  border-radius: 30px;
+  cursor: pointer;
+  &:hover {
+    color: rgb(210, 40, 86);
+    background-color: $white;
+    border: 3px solid $white;
+    box-shadow: 0 5px 7px rgba(1, 1, 1, 0.75);
+  }
+  &--pink {
+    color: rgb(210, 40, 86);
+    background-color: transparent;
+    border: 3px solid rgb(210, 40, 86);
+    &:hover {
+      color: $white;
+      background-color: rgb(210, 40, 86);
+      border-color: $pink;
+    }
+    &:active {
+      color: rgba($white, 0.3);
+      background-color: rgb(210, 40, 86);
+      border-color: $pink;
+    }
+  }
+  &--cancel {
+    color: rgba(40, 54, 69, 0.3);
+    background-color: transparent;
+    border: 3px solid rgba(40, 54, 69, 0.3);
+    &:hover {
+      color: rgba(40, 54, 69, 0.5);
+      border-color: rgba(40, 54, 69, 0.5);
+    }
+    &:active {
+      background-color: rgba(40, 54, 69, 0.3);
+      border-color: rgba(40, 54, 69, 0.3);
+    }
+  }
+}
+
+.btn-green {
+  @include border-box();
+  display: block;
+  width: 100%;
+  padding: 16px 0;
+  color: rgb(255, 255, 255);
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 30px;
+  text-transform: uppercase;
+  background-color: rgb(42, 171, 109);
+  border: 2px solid rgb(42, 171, 109);
+  cursor: pointer;
+  &:hover {
+    background-color: rgb(28, 155, 94);
+    border: 2px solid rgb(28, 155, 94);
+  }
+  &:active {
+    color: rgba($white, 0.3);
+    background-color: rgb(28, 155, 94);
+    border: 2px solid rgb(28, 155, 94);
+  }
+  &:disabled {
+    background-color: rgb(229, 229, 229);
+    border: 2px solid rgb(229, 229, 229);
+  }
+}
